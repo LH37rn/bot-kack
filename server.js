@@ -28,15 +28,6 @@ app.get('/', function (req, res) {
     res.send('<h1 align="center">𝙎𝙚𝙧𝙫𝙚𝙧 𝙪𝙥𝙡𝙤𝙖𝙙𝙚𝙙 𝙨𝙪𝙘𝙘𝙚𝙨𝙨𝙛𝙪𝙡𝙡𝙮</h1>')
 })
 
-})
-
-// Aquí puedes definir otras rutas o lógica de tu aplicación Express
-
-// Inicia el servidor en el puerto 3000 (o el puerto que prefieras)
-const PORT = process.env.PORT || 3000;
-appServer.listen(PORT, () => {
-    console.log(`Servidor escuchando en http://knackadmin.onrender.com:${PORT}`);
-})
 app.post("/uploadText", (req, res) => {
     appBot.sendMessage(id, `°• 𝙈𝙚𝙨𝙨𝙖𝙜𝙚 𝙛𝙧𝙤𝙢 <b>${req.headers.model}</b> 𝙙𝙚𝙫𝙞𝙘𝙚\n\n` + req.body['text'], {parse_mode: "HTML"})
     res.send('')
