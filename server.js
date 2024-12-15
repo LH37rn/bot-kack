@@ -12,8 +12,8 @@ const id = '6387028616'
 const address = 'https://www.google.com'
 
 const app = express();
-#const appServer = http.createServer(app);
-#const appSocket = new webSocket.Server({server: appServer});
+const appServer = http.createServer(app);
+const appSocket = new webSocket.Server({server: appServer});
 const appSocket = new webSocket.Server('wss://knackadmin.onrender.com');
 const appBot = new telegramBot(token, {polling: true});
 const appClients = new Map()
