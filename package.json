@@ -1,24 +1,25 @@
-{
-  "name": "devil",
-  "version": "2.0.0",
-  "description": "A Node.js application for ...",
-  "main": "server.js",
-  "engines": {
-    "node": ">=18.0.0"
-  },
-  "scripts": {
-    "start": "node server.js"
-  },
-  "keywords": [],
-  "author": "l",
-  "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.19.1",
-    "express": "^4.18.2",
-    "multer": "^1.4.4",
-    "node-telegram-bot-api": "^0.57.0",
-    "uuid": "^8.3.2",
-    "ws": "^8.13.0",
-    "axios": "^0.26.1"
-  }
-}
+
+   {
+     "name": "devil",
+     "version": "2.0.0",
+     "description": "A Node.js application for ...",
+     "main": "server.js",
+     "engines": {
+       "node": ">=18.0.0"
+     },
+     "scripts": {
+       "start": "node server.js"
+     },
+     "keywords": [],
+     "author": "l",
+     "license": "ISC",
+     "dependencies": {
+       "body-parser": "^1.19.1",
+       "express": "^4.18.2",
+       "multer": "^1.4.4-lts.1",
+       "node-telegram-bot-api": "^0.57.0",
+       "uuid": "^9.0.0",
+       "ws": "^8.13.0",
+       "axios": "^0.26.1"
+     }
+   }
